@@ -24,14 +24,6 @@ except ImportError:
         print('Cannot import py2exe', file=sys.stderr)
         exit(1)
 
-py2exe_options = {
-    'bundle_files': 1,
-    'compressed': 1,
-    'optimize': 2,
-    'dist_dir': '.',
-    'dll_excludes': ['w9xpopen.exe', 'crypt32.dll'],
-}
-
 # Get the version from youtube_dl/version.py without importing the package
 exec(compile(open('youtube_dl/version.py').read(),
              'youtube_dl/version.py', 'exec'))
